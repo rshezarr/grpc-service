@@ -1,2 +1,2 @@
 gen:
-	protoc --go_out=. --go-grpc_out=.
+	protoc --go_out=. --go-grpc_out=. proto/greet.proto
