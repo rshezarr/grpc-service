@@ -1,5 +1,5 @@
 # gRPC demo
-    Simple project based on gRPC
+Simple project based on gRPC
 
 ## Usage
     Split terminal
