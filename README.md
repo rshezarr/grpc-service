@@ -2,7 +2,7 @@
 Simple project based on gRPC
 
 ## Usage
-Split terminal
+### Split terminal
 Terminal #1
 ```
 $ cd server
@@ -13,7 +13,7 @@ Terminal #2
 $ cd client
 ```
 
-Then run with the same order:
+### Then run with the same order:
 
 Terminal #1
 ```
