@@ -2,7 +2,7 @@
 Simple project based on gRPC
 
 ## Usage
-    Split terminal
+Split terminal
 Terminal #1
 ```
 $ cd server
