@@ -9,13 +9,13 @@ import (
 )
 
 const (
-	port = ":8081"
+	port = ":8080"
 )
 
 func main() {
 	conn, err := grpc.Dial("localhost"+port, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
-		log.Fatalf("Error while connection: %e", err)
+		log.Fatalf("Error while connection: %s", err.Error())
 	}
 
 	defer conn.Close()
@@ -27,5 +27,4 @@ func main() {
 	}
 
 	callSayHelloClientStream(client, names)
-
 }
