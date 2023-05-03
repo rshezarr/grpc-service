@@ -12,7 +12,7 @@ func callSayHelloClientStream(cli pb.GreetServiceClient, names *pb.NamesList) {
 
 	stream, err := cli.SayHelloClientStreaming(context.Background())
 	if err != nil {
-		log.Fatalf("could not send name: %e", err)
+		log.Fatalf("could not send name: %v", err)
 	}
 
 	for _, name := range names.Names {
@@ -21,9 +21,9 @@ func callSayHelloClientStream(cli pb.GreetServiceClient, names *pb.NamesList) {
 		}
 
 		if err := stream.Send(req); err != nil {
-			log.Fatalf("Error while sending: %e", err)
+			log.Fatalf("Error while sending: %v", err)
 		}
-		log.Printf("Sent the request with name: %e", err)
+		log.Printf("Sent the request with name: %s", name)
 
 		time.Sleep(2 * time.Second)
 	}
